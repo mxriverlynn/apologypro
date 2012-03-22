@@ -3,7 +3,7 @@
   <title>Apology.pro: Because You're An Amateur</title>
   <link rel="stylesheet" href="apologypro.css" />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="epiceditor.js"></script>
+  <script src="marked.js"></script>
 </head>
 <body>
   <header>
@@ -17,6 +17,8 @@
         has been kind enough to 
         show the incompetent and arrgoant 
         <a href="https://gist.github.com/2160569">how to apologize correctly</a>.
+        Just copy this form letter and follow the instructions!
+        It's as easy as that.
       </p>
     </section>
     <article id="apology">
@@ -26,11 +28,22 @@
   </section>
   <script>
     $(function(){
-      // var apologyMarkdown = document.getElementById("apology-markdown");
-      // var markdown = $("#apology .gist-data").text();
-      // var ee = new EpicEditor(apologyMarkdown).load();
-      // ee.import('file', markdown);
-      // ee.preview();
+      var apology = $("#apology-markdown");
+
+      var markdown = "";
+      $("#apology .gist-data pre").children().each(function(){
+        var text = $(this).text();
+        markdown = markdown + "\n" + text;
+      });
+
+      marked.setOptions({
+        gfm: true,
+        pedantic: false,
+        sanitize: true
+      });
+
+      var html = marked(markdown);
+      apology.html(html);
     });
   </script>
 </body>
