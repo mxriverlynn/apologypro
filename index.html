@@ -6,26 +6,32 @@
   <script src="marked.js"></script>
 </head>
 <body>
+
   <header>
-    <h1>ApologyPro</h1>
-    <h2>Because You're An Amateur</h2>
-  </header>
-  <section id="content">
-    <section id="about">
-      <p>
+    <section id="content">
+      <section id="title">
+        <h1>ApologyPro</h1>
+        <h2>Because You're An Amateur</h2>
+      </section>
+      <section id="about">
         <a href="https://twitter.com/#!/avdi">Avdi Grimm</a> 
         has been kind enough to 
         show the incompetent and arrgoant 
         <a href="https://gist.github.com/2160569">how to apologize correctly</a>.
         Just copy this form letter and follow the instructions!
         It's as easy as that.
-      </p>
+      </section>
     </section>
-    <article id="apology">
-      <script src="https://gist.github.com/2160569.js?file=apology101.markdown"></script>
-    </article>
+  </header>
+
+  <section id="content">
     <article id="apology-markdown"></article>
   </section>
+
+  <article id="apology">
+    <script src="https://gist.github.com/2160569.js?file=apology101.markdown"></script>
+  </article>
+
   <script>
     $(function(){
       var apology = $("#apology-markdown");
