@@ -8,7 +8,7 @@
 <body>
 
   <header>
-    <section id="content">
+    <section class="container">
       <section id="title">
         <h1>ApologyPro</h1>
         <h2>Because You're An Amateur</h2>
@@ -24,9 +24,21 @@
     </section>
   </header>
 
-  <section id="content">
-    <article id="apology-markdown"></article>
+  <section id="main">
+    <section class="container">
+      <article id="apology-markdown"></article>
+    </section>
   </section>
+
+  <footer>
+    <section class="container">
+      ApologyPro renders the form letter directly from the
+      <a href="https://gist.github.com/2160569">Github Gist</a>
+      that Avdi provided, and uses the
+      <a href="https://github.com/chjj/marked">marked</a>
+      Markdown renderer to render it in your browser.
+    </section>
+  </footer>
 
   <article id="apology">
     <script src="https://gist.github.com/2160569.js?file=apology101.markdown"></script>
